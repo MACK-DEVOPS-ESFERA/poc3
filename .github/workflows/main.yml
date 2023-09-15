@@ -1,0 +1,23 @@
+name: CI/CD-mackenzie
+
+on: 
+  push:
+    branches: ["main"]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4.0.0
+    - name: Construção da imagem Docker
+      uses: docker/build-push-action@v5.0.0
+      with: 
+        context: .
+        file: Dockerfile
+        push: true
+        tags: |
+          MACK-DEVOPS-ESFERA/poc3:v1
+          MACK-DEVOPS-ESFERA/poc3:latest
+          
+        
