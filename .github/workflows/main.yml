@@ -17,7 +17,7 @@ jobs:
         file: Dockerfile
         push: true
         tags: |
-          MACK-DEVOPS-ESFERA/poc3:v1
-          MACK-DEVOPS-ESFERA/poc3:latest
+          mack-devops-esfera/poc3:v1
+          mack-devops-esfera/poc3:latest
           
         
