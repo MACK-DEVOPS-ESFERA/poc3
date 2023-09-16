@@ -55,6 +55,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4.0.0
+    - name: Install dependencies
+      run: pip install flake8
     - name: Python flake8 Lint
       uses: py-actions/flake8@v2.2.1
       with:
