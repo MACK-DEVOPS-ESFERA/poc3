@@ -10,3 +10,5 @@ RUN pip install -r requirements.txt
 
 # Run python script.py when the container launches
 CMD ["python", "app.py"]
+
+
