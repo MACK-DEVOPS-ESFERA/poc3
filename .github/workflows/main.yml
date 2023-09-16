@@ -2,7 +2,7 @@ name: CI/CD-mackenzie
 
 on: 
   push:
-    branches: ["main"]
+    branches: ["main","feature*"]
 
 jobs:
   SAST:
@@ -46,22 +46,5 @@ jobs:
         tags: |
           danilodevops/hello-python-mackenzie:${{github.run_number}}
           danilodevops/hello-python-mackenzie:latest
-
-  review:
-    runs-on: ubuntu-latest
-    container:
-      image: python:3.8
-    needs: ["SAST","CI"]
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4.0.0
-    - name: Install dependencies
-      run: pip install flake8
-    - name: Python flake8 Lint
-      uses: py-actions/flake8@v2.2.1
-      with:
-        path: .
-        flake8-version: latest
-        update-pip: true
         
         
