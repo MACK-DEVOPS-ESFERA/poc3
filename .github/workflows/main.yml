@@ -22,7 +22,7 @@ jobs:
         file: Dockerfile
         push: true
         tags: |
-          mack-devops-esfera/hello-python:${{github.run.number}}
-          mack-devops-esfera/hello-python:latest
+          mack-devops-esfera/poc3:${{github.run.number}}
+          mack-devops-esfera/poc3:latest
           
         
