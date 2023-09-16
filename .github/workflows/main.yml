@@ -46,5 +46,16 @@ jobs:
         tags: |
           danilodevops/hello-python-mackenzie:${{github.run_number}}
           danilodevops/hello-python-mackenzie:latest
-          
+
+  review:
+    runs-on: ubuntu-latest
+    needs: ["SAST","CI"]
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4.0.0
+    - name: python-flake8
+      uses: julianwachholz/flake8-action@v2.0.2
+      with:
+        checkName: review
+        path: .
         
