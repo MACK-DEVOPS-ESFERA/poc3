@@ -53,9 +53,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4.0.0
-    - name: python-flake8
-      uses: julianwachholz/flake8-action@v2.0.2
+    - name: Python flake8 Lint
+      uses: py-actions/flake8@v2.2.1
       with:
-        checkName: review
         path: .
+        flake8-version: latest
+        update-pip: true
+        
         
