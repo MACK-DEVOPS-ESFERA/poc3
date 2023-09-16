@@ -17,12 +17,6 @@ jobs:
         src: .
         output: .
         type: python
-
-    - name: Archive SAST Report
-      uses: actions/upload-artifact@v2
-      with:
-        name: sast-report
-        path: .
         
   CI:
     runs-on: ubuntu-latest
