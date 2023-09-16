@@ -5,9 +5,17 @@ on:
     branches: ["main"]
 
 jobs:
+  SAST:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sast-scan
+      uses: AppThreat/sast-scan-action@1.0.2
+      with:
+        src: .
+        output: .
+        type: python
   CI:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4.0.0
     - name: Autenticação no Docker Hub
