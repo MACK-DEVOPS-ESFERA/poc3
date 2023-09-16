@@ -22,7 +22,7 @@ jobs:
         file: Dockerfile
         push: true
         tags: |
-          mack-devops-esfera/hello-python-mackenzie:${{github.run_number}}
-          mack-devops-esfera/hello-python-mackenzie:latest
+          danilodevops/hello-python-mackenzie:${{github.run_number}}
+          danilodevops/hello-python-mackenzie:latest
           
         
