@@ -49,6 +49,8 @@ jobs:
 
   review:
     runs-on: ubuntu-latest
+    container:
+      image: python:3.8
     needs: ["SAST","CI"]
     steps:
     - name: Checkout repository
